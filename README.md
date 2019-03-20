@@ -4,7 +4,7 @@ An implementation of the logic puzzle Hashiwokakero (橋をかけろ Hashi o kak
 
 
 <h4>Goal and rules of Hashiwokakero</h4>
-In Hashiwokakero a number of circles is given. Inside each a circle a number between 1 and 8 (inclusive) is drawn. The circles represent islands. The goal of the puzzle is to connect all islands by bridges (edges) so that (a) every island can be reached by every other island by using a path consisting of islands and bridges (i.e., the resulting graph must be a single connected component) and (b) every island is connected to other islands by exactly as many bridges as the number inside it dictates.
+In Hashiwokakero a number of circles is given. Inside each circle a number between 1 and 8 (inclusive) is drawn. The circles represent islands. The goal of the puzzle is to connect all islands by bridges (edges) so that (a) every island can be reached by every other island by using a path consisting of islands and bridges (i.e., the resulting graph must be a single connected component) and (b) every island is connected to other islands by exactly as many bridges as the number inside it dictates.
 
 There are some rules for building bridges between islands (i.e., drawing edges between circles):
 <ul>
