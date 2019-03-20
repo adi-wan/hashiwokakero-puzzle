@@ -3,9 +3,6 @@ package common;
 /**
  * An instance of <code>Coordinates</code> represents the location in (x,y)
  * coordinate space, specified in integer precision.
- * 
- * @author Adrian Stritzinger
- *
  */
 public class Coordinates implements Comparable<Coordinates> {
 
@@ -15,10 +12,8 @@ public class Coordinates implements Comparable<Coordinates> {
 	/**
 	 * Constructs an instance of <code>Coordinates</code>.
 	 * 
-	 * @param x
-	 *            coordinate
-	 * @param y
-	 *            coordinate
+	 * @param x coordinate
+	 * @param y coordinate
 	 */
 	public Coordinates(int x, int y) {
 		this.x = x;
@@ -32,8 +27,7 @@ public class Coordinates implements Comparable<Coordinates> {
 	 * not overriden so that two coordinates with the same x and the same y
 	 * coordinate have different hashcodes.
 	 * 
-	 * @param otherCoords
-	 *            to be compared
+	 * @param otherCoords to be compared
 	 * @result a negative integer, zero, or a positive integer as these coordinates
 	 *         are less than, equal to, or greater than the specified coordinates
 	 */
@@ -61,8 +55,7 @@ public class Coordinates implements Comparable<Coordinates> {
 	 * not overriden so that two coordinates with the same x and the same y
 	 * coordinate have different hashcodes.
 	 * 
-	 * @param obj
-	 *            the reference object with which to compare.
+	 * @param obj the reference object with which to compare.
 	 * @result true if this object is the same as the obj argument; false otherwise.
 	 */
 	@Override
@@ -79,8 +72,8 @@ public class Coordinates implements Comparable<Coordinates> {
 	 * <code>direction</code>. Figuratively, the method takes one step in the
 	 * <code>direction</code>.
 	 * 
-	 * @param direction
-	 *            the direction in which the next coordinates are to be determined.
+	 * @param direction the direction in which the next coordinates are to be
+	 *                  determined.
 	 * @return next coordinates in direction.
 	 */
 	public Coordinates getNextCoordsIn(Direction direction) {
@@ -110,13 +103,12 @@ public class Coordinates implements Comparable<Coordinates> {
 	 * Returns the direction of the specified coordinates relative to the
 	 * coordinates represented by <code>this Coordinates</code> instance.
 	 * 
-	 * @param coords
-	 *            the coordinates of which the direction is to be determined.
+	 * @param coords the coordinates of which the direction is to be determined.
 	 * @return direction of <code>coords</code>
-	 * @throws IllegalArgumentException
-	 *             if the direction of the specified coordinates relative to the
-	 *             coordinates represented by <code>this Coordinates</code> instance
-	 *             is ambiguous.
+	 * @throws IllegalArgumentException if the direction of the specified
+	 *                                  coordinates relative to the coordinates
+	 *                                  represented by <code>this Coordinates</code>
+	 *                                  instance is ambiguous.
 	 */
 	public Direction getDirectionOfCoord(Coordinates coords) throws IllegalArgumentException {
 		if (this.x == coords.x) {

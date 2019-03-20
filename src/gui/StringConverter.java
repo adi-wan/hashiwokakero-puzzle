@@ -7,9 +7,6 @@ import javax.swing.JPanel;
 
 /**
  * A utility class containing methods for manipulating strings.
- * 
- * @author Adrian Stritzinger
- *
  */
 public class StringConverter {
 

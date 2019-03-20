@@ -42,9 +42,6 @@ import model.IPuzzleSituationModel;
  * graphical representation of) the Hashiwokakeru puzzle, are updated by the
  * <code>JMainFrame</code>.
  * </p>
- * 
- * @author Adrian Stritzinger
- *
  */
 public class JMainFrame extends JFrame implements IPuzzleSituationView {
 
@@ -71,7 +68,7 @@ public class JMainFrame extends JFrame implements IPuzzleSituationView {
 		controlPanel = new JControlPanel(this, inputListener, hashiModel);
 		puzzleStateLabel = new JLabel(getStateText());
 		setPuzzleStateLabel();
-		setTitle("Adrian Stritzinger / M-Nr. 8268720");
+		setTitle("Hashiwokakero");
 		setJMenuBar(new JPuzzleMenuBar(this, inputListener, hashiModel));
 		getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 		populateContentPane();

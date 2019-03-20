@@ -42,9 +42,6 @@ import model.IPuzzleSituationModel;
  * If direction is ambiguous or there is no island at the coordinates of the
  * click, the click is ignored.
  * </p>
- * 
- * @author Adrian Stritzinger
- *
  */
 public class JFieldPanel extends JPanel implements IModelQuerier {
 

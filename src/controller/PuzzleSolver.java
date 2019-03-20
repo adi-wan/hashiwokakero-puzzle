@@ -9,9 +9,6 @@ import gui.IPuzzleSituationView;
  * be added. For a bridge to be added, it certainly must be added based on the
  * current state of the puzzle (see {@link BridgeAdder#makeSureMove()
  * makeSureMove()} method).
- * 
- * @author Adrian Stritzinger
- *
  */
 public class PuzzleSolver extends Thread {
 
@@ -64,7 +61,7 @@ public class PuzzleSolver extends Thread {
 	/**
 	 * <code>Enum</code> representing the states of <code>this</code> thread.
 	 * 
-	 * @author Adrian Stritzinger
+	 
 	 *
 	 */
 	public static enum SolverState {

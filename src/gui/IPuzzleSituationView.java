@@ -8,9 +8,6 @@ import model.IPuzzleSituationModel;
  * represent the parts of the view of the Hashiwokakeru puzzle application that
  * need to be refreshed or that are responsible for refreshing the components of
  * the view that need to be refreshed.
- * 
- * @author Adrian Stritzinger
- *
  */
 public interface IPuzzleSituationView {
 	/**

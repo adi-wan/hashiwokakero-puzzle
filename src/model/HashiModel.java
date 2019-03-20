@@ -10,9 +10,6 @@ import model.HashiModel.Bridge;
 /**
  * 
  * This class models a Hashiwokakero puzzle and its current state.
- * 
- * @author Adrian Stritzinger
- * 
  */
 public class HashiModel implements IPuzzleSituationModel {
 	private int noOfIslands;
@@ -455,7 +452,7 @@ public class HashiModel implements IPuzzleSituationModel {
 	 * whose instances can be elements of a field of a Hashiwokakeru puzzle (bridges
 	 * and islands).
 	 * 
-	 * @author Adrian Stritzinger
+	 
 	 *
 	 */
 	public interface FieldElement {
@@ -465,7 +462,7 @@ public class HashiModel implements IPuzzleSituationModel {
 	 * 
 	 * This inner class models an island on the field of the Hashiwokakeru puzzle.
 	 * 
-	 * @author Adrian Stritzinger
+	 
 	 *
 	 */
 	public class Island implements FieldElement, Comparable<Island> {
@@ -561,7 +558,7 @@ public class HashiModel implements IPuzzleSituationModel {
 	 * 
 	 * This inner class models a bridge on the field of the Hashiwokakeru puzzle.
 	 * 
-	 * @author Adrian Stritzinger
+	 
 	 *
 	 */
 	public class Bridge implements FieldElement {

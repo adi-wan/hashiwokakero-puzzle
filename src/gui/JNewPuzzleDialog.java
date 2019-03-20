@@ -35,9 +35,6 @@ import controller.IInputListener;
  * 
  * A class extending <code>JDialog</code> representing the dialog to create a
  * new Hashiwokakeru puzzle.
- * 
- * @author Adrian Stritzinger
- *
  */
 public class JNewPuzzleDialog extends JDialog {
 

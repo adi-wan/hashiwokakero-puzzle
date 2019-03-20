@@ -8,9 +8,6 @@ package model;
  * <li>{@link #CONTAINS_ERROR}</li>
  * <li>{@link #UNSOLVABLE}</li>
  * <li>{@link #SOLVED}</li></ul>
- * 
- * @author Adrian Stritzinger
- *
  */
 public enum PuzzleState {
 

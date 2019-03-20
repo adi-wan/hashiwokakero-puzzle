@@ -18,9 +18,6 @@ import model.IPuzzleSituationModel;
  * Hashiwokakeru puzzle if this bridge must certainly be added to the puzzle
  * based on the puzzle's current state (see {@link #makeSureMove() makeSureMove}
  * method).
- * 
- * @author Adrian Stritzinger
- *
  */
 public class BridgeAdder {
 

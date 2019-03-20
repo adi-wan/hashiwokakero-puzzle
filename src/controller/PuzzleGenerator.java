@@ -16,9 +16,6 @@ import model.IPuzzleSituationModel;
 /**
  * Class providing methods for generating a random Hashiwokakero puzzle that can
  * be solved.
- * 
- * @author Adrian Stritzinger
- *
  */
 public class PuzzleGenerator {
 

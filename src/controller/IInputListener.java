@@ -12,9 +12,6 @@ import model.HashiModel.Island;
  * After processing an input, the state of the model of the Hashiwokakeru puzzle
  * is updated and relevant components of the view are refreshed if model changed
  * as a result of the processing.
- * 
- * @author Adrian Stritzinger
- *
  */
 public interface IInputListener {
 	/**

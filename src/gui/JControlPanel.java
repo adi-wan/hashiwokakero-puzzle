@@ -20,9 +20,6 @@ import model.IPuzzleSituationModel;
  * A <code>JPanel</code> containing two buttons, one for adding a bridge and one
  * for solving the whole puzzle automatically. If no (further) bridge can be
  * added a dialog is shown that informs the user of the cause.
- * 
- * @author Adrian Stritzinger
- *
  */
 public class JControlPanel extends JPanel implements IModelQuerier {
 

@@ -16,9 +16,6 @@ import model.IPuzzleSituationModel;
 /**
  * Class for saving the current state of a Hashiwokakero puzzle into a .bgs
  * file.
- * 
- * @author Adrian Stritzinger
- *
  */
 public class PuzzleSaver {
 

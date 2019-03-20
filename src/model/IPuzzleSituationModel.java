@@ -20,9 +20,6 @@ import model.HashiModel.Island;
  * the (field of the) puzzle. <strong>Important:</strong> Rows are numbered
  * starting at the top like similar to coordinates on a screen.
  * </p>
- * 
- * @author Adrian Stritzinger
- *
  */
 public interface IPuzzleSituationModel {
 

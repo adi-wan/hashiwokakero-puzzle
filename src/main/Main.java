@@ -1,6 +1,6 @@
 package main;
 
-import java.io.File;	
+import java.io.File;
 
 import controller.BridgeAdder;
 import controller.MainPuzzleController;
@@ -11,13 +11,11 @@ import controller.PuzzleStateChecker;
 import model.IPuzzleSituationModel;
 
 /**
- * Class containing the main-method as a starting point for the Bridges / Hashiwokakeru application.
- * 
- * @author Adrian Stritzinger
- *
+ * Class containing the main-method as a starting point for the Bridges /
+ * Hashiwokakeru application.
  */
-public class Main_Stritzinger_Adrian {
-	
+public class Main {
+
 	/*
 	 * Starts the application.
 	 */
@@ -27,8 +25,9 @@ public class Main_Stritzinger_Adrian {
 //			testSolvePuzzle("/Users/Hightown/Desktop/BGS/");
 //		}
 	}
-	
-	// TODO: Optimize method, so it is possible to check the puzzles that can't be solved or take a long time to solve manually
+
+	// TODO: Optimize method, so it is possible to check the puzzles that can't be
+	// solved or take a long time to solve manually
 //	public static void testSolvePuzzle(String solutionPath) {
 //		IPuzzleSituationModel hashiModel = new PuzzleGenerator().getPuzzleSituationModel();
 //		PuzzleStateChecker stateChecker = new PuzzleStateChecker(hashiModel);

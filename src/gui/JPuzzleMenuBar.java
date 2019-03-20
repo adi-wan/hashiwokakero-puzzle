@@ -19,9 +19,6 @@ import model.IPuzzleSituationModel;
  * the Hashiwokakeru puzzle application for restarting and saving the currently
  * shown puzzle, creating and loading a new puzzle as well as quitting the
  * application.
- * 
- * @author Adrian Stritzinger
- *
  */
 public class JPuzzleMenuBar extends JMenuBar implements IModelQuerier {
 

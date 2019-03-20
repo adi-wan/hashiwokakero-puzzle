@@ -17,9 +17,6 @@ import model.IPuzzleSituationModel;
  * Instances of the <code>PuzzleStateChecker</code> class are used to determine
  * the current <code>PuzzleState</code> of an instance of a Hashiwokakeru puzzle
  * and updating it.
- * 
- * @author Adrian Stritzinger
- *
  */
 public class PuzzleStateChecker {
 

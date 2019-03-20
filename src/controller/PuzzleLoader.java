@@ -17,9 +17,6 @@ import model.IPuzzleSituationModel;
 /**
  * Class providing method for loading a Hashiwokakero puzzle from a file.
  * <b>Note that the puzzle loaded can be unsolvable.</b>
- * 
- * @author Adrian Stritzinger
- *
  */
 public class PuzzleLoader {
 

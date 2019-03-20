@@ -7,11 +7,7 @@ import model.HashiModel.Island;
 import model.IPuzzleSituationModel;
 
 /**
- * 
  * Main controller receiving and processing inputs from view.
- * 
- * @author Adrian Stritzinger
- *
  */
 public class MainPuzzleController implements IInputListener {
 
