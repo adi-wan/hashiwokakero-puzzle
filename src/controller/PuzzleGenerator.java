@@ -14,8 +14,10 @@ import model.HashiModel.Island;
 import model.IPuzzleSituationModel;
 
 /**
- * Class providing methods for generating a random Hashiwokakero puzzle that can
- * be solved.
+ * Class providing methods for generating a relatively random Hashiwokakero
+ * puzzle that can be solved. Randomness is confined by constraints such as the
+ * number of islands that the puzzle should have or the width and height of the
+ * puzzle.
  */
 public class PuzzleGenerator {
 
@@ -60,13 +62,11 @@ public class PuzzleGenerator {
 	 * Hashiwokakero puzzle with random number of islands in interval [min(width,
 	 * height), max(4, width*height / 5)].
 	 * 
-	 * @param width
-	 *            of puzzle to be generated
-	 * @param height
-	 *            of puzzle to be generated
+	 * @param width  of puzzle to be generated
+	 * @param height of puzzle to be generated
 	 * @return A Hashiwokakero puzzle that can be solved
-	 * @throws IllegalArgumentException
-	 *             if <code>width</code> or <code>height</code> is not in [4, 25]
+	 * @throws IllegalArgumentException if <code>width</code> or <code>height</code>
+	 *                                  is not in [4, 25]
 	 */
 	public IPuzzleSituationModel getPuzzleSituationModel(int width, int height) throws IllegalArgumentException {
 		int noOfIslands = getRandNoOfIslands(width, height);
@@ -81,17 +81,15 @@ public class PuzzleGenerator {
 	 * Generates a random, solvable <code>width</code> x <code>height</code>
 	 * Hashiwokakero puzzle with <code>noOfIslands</code> number of islands.
 	 * 
-	 * @param width
-	 *            of puzzle to be generated
-	 * @param height
-	 *            of puzzle to be generated
-	 * @param noOfIslands
-	 *            The number of islands of the puzzle to be generated
+	 * @param width       of puzzle to be generated
+	 * @param height      of puzzle to be generated
+	 * @param noOfIslands The number of islands of the puzzle to be generated
 	 * @return A Hashiwokakero puzzle that can be solved
-	 * @throws IllegalArgumentException
-	 *             if <code>width</code> or <code>height</code> is not in [4, 25] or
-	 *             <code>noOfIslands</code> is not in [2, max(4,
-	 *             <code>width</code>*<code>height</code> / 5)]
+	 * @throws IllegalArgumentException if <code>width</code> or <code>height</code>
+	 *                                  is not in [4, 25] or
+	 *                                  <code>noOfIslands</code> is not in [2,
+	 *                                  max(4,
+	 *                                  <code>width</code>*<code>height</code> / 5)]
 	 */
 	public IPuzzleSituationModel getPuzzleSituationModel(int width, int height, int noOfIslands)
 			throws IllegalArgumentException {
@@ -148,7 +146,7 @@ public class PuzzleGenerator {
 			bridgeableIslands.remove(randIslandIndex);
 		} else { // new island including bridge to existing one can be added
 			Coordinates coords = validNeighborIslandCoords.get(random.nextInt(validNeighborIslandCoords.size()));
-			// check if bridge  must be split to add island 
+			// check if bridge must be split to add island
 			if (hashiModel.bridgeAt(coords.x, coords.y)) {
 				addIslandBySplittingBridgeWithBridgeToExIslands(existingIsland, coords);
 			} else {
@@ -170,7 +168,8 @@ public class PuzzleGenerator {
 		hashiModel.removeBridgeBetweenIslandsAndResetBridgesRequired(oldBridge, true);
 		addIslandWithBridgeToExIsland(existingIsland, coords);
 		Island newIsland = hashiModel.getIslandAt(coords.x, coords.y);
-		hashiModel.addBridgeBetweenIslandsAndResetBridgesRequired(oldBridge.getStart(), newIsland, oldBridge.isDouble());
+		hashiModel.addBridgeBetweenIslandsAndResetBridgesRequired(oldBridge.getStart(), newIsland,
+				oldBridge.isDouble());
 		hashiModel.addBridgeBetweenIslandsAndResetBridgesRequired(oldBridge.getEnd(), newIsland, oldBridge.isDouble());
 	}
 
@@ -196,8 +195,7 @@ public class PuzzleGenerator {
 	 * excludes the coordinates of the islands themselves.</b>
 	 * </p>
 	 * 
-	 * @param existingIsland
-	 *            that is used for generating coordinates
+	 * @param existingIsland that is used for generating coordinates
 	 * @return A list of coordinates on which a neighbor island to the existing
 	 *         island can be placed
 	 */
@@ -236,10 +234,8 @@ public class PuzzleGenerator {
 	 * <b>Note that there could be a bridge crossing at (x, y) since the "between"
 	 * excludes the coordinates of the islands themselves.</b>
 	 * 
-	 * @param existingIsland
-	 *            that is used for generating coordinates
-	 * @param direction
-	 *            in which coordinates are searched for
+	 * @param existingIsland that is used for generating coordinates
+	 * @param direction      in which coordinates are searched for
 	 * @return A list of coordinates in <code>direction</code> on which a neighbor
 	 *         island to the existing island can be placed
 	 */
@@ -247,8 +243,7 @@ public class PuzzleGenerator {
 		List<Coordinates> validNeighborIslandCoords = new ArrayList<>();
 		// add all coordinates that a neighbor island could be built on to list
 		Coordinates coords = existingIsland.getCoords().getNextCoordsIn(direction);
-		while (hashiModel.isValidFieldPosition(coords.x, coords.y)
-				&& !hashiModel.islandAt(coords.x, coords.y)) {
+		while (hashiModel.isValidFieldPosition(coords.x, coords.y) && !hashiModel.islandAt(coords.x, coords.y)) {
 			if (hashiModel.isValidIslandPosition(coords.x, coords.y)) {
 				validNeighborIslandCoords.add(coords);
 			}

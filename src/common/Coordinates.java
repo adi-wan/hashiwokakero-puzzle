@@ -5,6 +5,11 @@ package common;
  * coordinate space, specified in integer precision.
  */
 public class Coordinates implements Comparable<Coordinates> {
+	
+	// A little change to check if synchronization works
+	// This is now
+	
+	private int z;
 
 	public final int x;
 	public final int y;

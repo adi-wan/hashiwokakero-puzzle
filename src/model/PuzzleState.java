@@ -14,7 +14,7 @@ public enum PuzzleState {
 	/**
 	 * 
 	 * Puzzle is yet to be solved. Does not guarantee that puzzle can be solved by
-	 * simply adding bridges, i.e. without removing bridges already added. If puzzle
+	 * simply adding bridges, i.e., without removing bridges that have been added. If puzzle
 	 * was loaded from a file, there is possibly no solution, otherwise there
 	 * certainly is a solution.
 	 * 
